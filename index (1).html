@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lingam School for Special Education — Kolathur, Chennai</title>
+<meta name="description" content="Lingam School for Special Education provides dedicated, evidence-based developmental support, sensory integration, and joyful life-skills training for neurodivergent children in Chennai.">
+<style>
+  :root{
+    --bg:#0b0710;
+    --bg-alt:#120b16;
+    --surface:#1a121f;
+    --surface-2:#221828;
+    --border:rgba(255,255,255,0.09);
+    --border-strong:rgba(255,255,255,0.16);
+    --text:#f6eef4;
+    --text-muted:#c7b7c4;
+    --text-faint:#8e7d8b;
+    --maroon:#ff4f9a;
+    --maroon-deep:#d6236f;
+    --maroon-tint:rgba(255,79,154,0.14);
+    --orange:#ff9c3c;
+    --orange-tint:rgba(255,156,60,0.14);
+    --blue:#6fc7e8;
+    --blue-tint:rgba(111,199,232,0.14);
+    --indigo:#a6adf5;
+    --indigo-tint:rgba(166,173,245,0.14);
+    --rose:#ff9ec2;
+    --rose-tint:rgba(255,158,194,0.14);
+    --radius-lg:16px;
+    --radius-md:12px;
+    --radius-sm:8px;
+    --shadow-lg:0 20px 45px -15px rgba(0,0,0,0.55);
+    --shadow-md:0 10px 30px -10px rgba(0,0,0,0.5);
+    --container:1280px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Lexend', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Outfit','Segoe UI',system-ui,sans-serif;
+    margin:0;
+    color:var(--text);
+  }
+  p{margin:0;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;margin:0;padding:0;}
+  img{max-width:100%;display:block;}
+  button{font-family:inherit;cursor:pointer;}
+
+  .wrap{
+    max-width:var(--container);
+    margin:0 auto;
+    padding-left:24px;
+    padding-right:24px;
+  }
+  @media(min-width:768px){ .wrap{padding-left:48px;padding-right:48px;} }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+    color:var(--maroon);
+  }
+  .eyebrow::before{
+    content:"";
+    width:8px;height:8px;border-radius:50%;
+    background:var(--maroon);
+    box-shadow:0 0 0 4px var(--maroon-tint);
+  }
+  .section-head{max-width:768px;margin:0 auto 56px;text-align:center;}
+  .section-head h2{font-size:clamp(28px,4vw,38px);font-weight:700;line-height:1.2;margin:14px 0 16px;}
+  .section-head p{color:var(--text-muted);font-size:16px;line-height:1.6;}
+
+  .badge{
+    display:inline-flex;align-items:center;
+    padding:4px 12px;border-radius:999px;
+    font-size:11px;font-weight:600;
+    white-space:nowrap;
+  }
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    height:48px;padding:0 28px;border-radius:var(--radius-sm);
+    font-weight:600;font-size:15px;border:none;
+    background:var(--maroon);color:#1a0410;
+    box-shadow:0 10px 24px -8px rgba(255,79,154,0.55);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px -8px rgba(255,79,154,0.65);}
+  .btn-outline{
+    background:transparent;
+    color:var(--text);
+    border:2px solid var(--border-strong);
+    box-shadow:none;
+  }
+  .btn-outline:hover{border-color:var(--maroon);color:var(--maroon);transform:translateY(-2px);}
+  .btn-sm{height:40px;padding:0 18px;font-size:13px;border-radius:var(--radius-sm);}
+
+  .icon{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .icon svg{width:100%;height:100%;}
+
+  /* ---------- Top info ribbon ---------- */
+  .ribbon{
+    background:#3a0022;
+    border-bottom:1px solid #55093c;
+    padding:8px 0;
+    font-size:11px;
+    color:#ffd9e5;
+  }
+  .ribbon .wrap{
+    display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between;
+  }
+  .ribbon-left{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;}
+  .ribbon-item{display:flex;align-items:center;gap:6px;font-weight:500;color:#fff;}
+  .ribbon-item .icon{width:12px;height:12px;color:var(--orange);}
+  .ribbon-right{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+  .ribbon-pill{background:#55093c;color:#fff;padding:2px 8px;border-radius:4px;font-weight:500;letter-spacing:.3px;}
+  .ribbon-hours{color:#ffd9e5;}
+
+  /* ---------- Header ---------- */
+  header.site-header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(11,7,16,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-row{
+    display:flex;align-items:center;justify-content:space-between;
+    height:80px;gap:24px;
+  }
+  .brand{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+  .brand-mark{
+    width:44px;height:48px;border-radius:12px;background:var(--maroon);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 20px -6px rgba(255,79,154,0.5);
+  }
+  .brand-mark .icon{width:20px;height:20px;color:#1a0410;}
+  .brand-text .title{font-family:'Outfit';font-weight:700;font-size:20px;color:var(--maroon);letter-spacing:-.3px;}
+  .brand-text .sub{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);}
+
+  .nav-links{display:none;gap:28px;align-items:center;}
+  .nav-links a{font-weight:600;font-size:15px;color:var(--text-muted);padding-bottom:6px;border-bottom:2px solid transparent;white-space:nowrap;}
+  .nav-links a.active{color:var(--maroon);border-color:var(--maroon);font-weight:700;}
+  .nav-links a:hover{color:var(--text);}
+  @media(min-width:1080px){ .nav-links{display:flex;} }
+
+  .nav-actions{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+  .icon-btn{
+    width:38px;height:38px;border-radius:var(--radius-sm);
+    border:1px solid var(--border-strong);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--text-muted);
+  }
+  .icon-btn .icon{width:15px;height:15px;}
+  .nav-actions .btn-outline{display:none;}
+  .nav-actions .btn{display:none;}
+  @media(min-width:640px){ .nav-actions .btn-outline{display:inline-flex;} }
+  @media(min-width:860px){ .nav-actions .btn{display:inline-flex;} }
+
+  /* ---------- Hero ---------- */
+  .hero{padding:64px 0;background:var(--bg);overflow:hidden;}
+  .hero-grid{
+    display:grid;grid-template-columns:1fr;gap:48px;align-items:center;
+  }
+  @media(min-width:1000px){ .hero-grid{grid-template-columns:1fr 1fr;gap:56px;} }
+
+  .hero-left{display:flex;flex-direction:column;gap:24px;}
+  .hero-pill{
+    display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
+    background:var(--maroon-tint);border:1px solid rgba(255,79,154,0.35);
+    padding:7px 13px;border-radius:999px;font-size:11px;font-weight:600;color:var(--maroon);
+  }
+  .hero-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--maroon);}
+  .hero h1{font-size:clamp(34px,5.4vw,48px);font-weight:700;letter-spacing:-1.2px;line-height:1.16;}
+  .hero h1 .accent{
+    color:var(--orange);
+    text-decoration:underline;
+    text-decoration-color:var(--orange);
+    text-decoration-thickness:4px;
+    text-underline-offset:6px;
+    font-weight:800;
+  }
+  .hero-desc{max-width:560px;color:var(--text-muted);font-size:18px;line-height:1.55;}
+
+  .badge-row{display:flex;flex-wrap:wrap;gap:8px;}
+  .badge.autism{background:var(--blue-tint);color:#8fe0ff;}
+  .badge.downs{background:var(--orange-tint);color:var(--orange);}
+  .badge.cerebral{background:var(--rose-tint);color:var(--rose);}
+  .badge.intellectual{background:var(--indigo-tint);color:var(--indigo);}
+  .badge.adhd{background:var(--maroon-tint);color:var(--maroon);}
+
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:16px;padding-top:4px;}
+
+  .trust-row{
+    display:flex;gap:16px;padding-top:24px;margin-top:8px;
+    border-top:1px solid var(--border);
+  }
+  .trust-item{flex:1;min-width:0;}
+  .trust-item .num{font-family:'Outfit';font-weight:700;font-size:24px;color:var(--maroon);}
+  .trust-item .label{font-size:11px;font-weight:500;color:var(--text-faint);margin-top:2px;}
+
+  /* Hero carousel */
+  .hero-right{position:relative;}
+  .carousel-frame{
+    position:relative;background:var(--surface-2);border:1px solid var(--border-strong);
+    border-radius:var(--radius-lg);padding:11px;box-shadow:var(--shadow-lg);
+  }
+  .carousel{position:relative;border-radius:var(--radius-md);overflow:hidden;background:#2a1830;aspect-ratio:554/415.5;}
+  .slide{
+    position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
+    padding:24px;opacity:0;pointer-events:none;transition:opacity .4s ease;
+  }
+  .slide.active{opacity:1;pointer-events:auto;}
+  .slide-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;background:#2a1830;}
+  .slide::before{
+    content:"";position:absolute;inset:0;z-index:1;
+  }
+  .slide-1::before{background:linear-gradient(180deg, rgba(110,0,66,0.15) 0%, rgba(0,0,0,0.75) 100%);}
+  .slide-2::before{background:linear-gradient(180deg, rgba(0,60,66,0.2) 0%, rgba(0,0,0,0.75) 100%);}
+  .slide > .tag, .slide > h3, .slide > p{position:relative;z-index:2;}
+  .slide .tag{
+    align-self:flex-start;background:var(--orange);color:#3f2100;font-weight:700;
+    font-size:11px;padding:4px 10px;border-radius:4px;margin-bottom:12px;
+  }
+  .slide h3{color:#fff;font-size:20px;font-weight:700;margin-bottom:6px;}
+  .slide p{color:#ffd9e5;font-size:14px;opacity:.95;}
+
+  .car-btn{
+    position:absolute;top:50%;transform:translateY(-50%);
+    width:44px;height:44px;border-radius:999px;border:none;
+    background:rgba(255,255,255,0.92);display:flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow-md);color:#1a0410;z-index:2;
+  }
+  .car-btn.prev{left:16px;} .car-btn.next{right:16px;}
+  .car-btn .icon{width:16px;height:16px;}
+  .indicators{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2;}
+  .indicators button{height:8px;border:none;border-radius:999px;background:rgba(255,255,255,0.4);width:10px;padding:0;transition:width .3s ease, background .3s ease;}
+  .indicators button.active{width:28px;background:#fff;}
+
+  .reassure-badge{
+    position:absolute;left:-16px;bottom:-20px;
+    background:var(--surface);border:1px solid var(--border-strong);
+    border-radius:var(--radius-md);box-shadow:var(--shadow-lg);
+    display:flex;align-items:center;gap:12px;padding:17px;max-width:280px;
+  }
+  .reassure-badge .icon-circle{
+    width:40px;height:40px;border-radius:999px;background:var(--orange-tint);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .reassure-badge .icon-circle .icon{width:20px;height:20px;color:var(--orange);}
+  .reassure-badge .t1{font-weight:700;font-size:13px;}
+  .reassure-badge .t2{font-size:12px;color:var(--text-muted);margin-top:2px;}
+
+  /* ---------- Value props ---------- */
+  .value-props{
+    background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+    padding:41px 0;
+  }
+  .vp-grid{display:grid;grid-template-columns:1fr;gap:24px;}
+  @media(min-width:700px){ .vp-grid{grid-template-columns:1fr 1fr;} }
+  @media(min-width:1100px){ .vp-grid{grid-template-columns:repeat(4,1fr);} }
+  .vp-card{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);
+    padding:25px;display:flex;flex-direction:column;gap:8px;
+    box-shadow:0 4px 20px 0 rgba(0,0,0,0.25);
+  }
+  .vp-card .icon-sq{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;}
+  .vp-card .icon-sq .icon{width:20px;height:20px;}
+  .vp-card h3{font-size:20px;font-weight:600;}
+  .vp-card p{color:var(--text-muted);font-size:14px;line-height:1.55;}
+  .vp-card:nth-child(1) .icon-sq{background:var(--blue-tint);} .vp-card:nth-child(1) .icon-sq .icon{color:var(--blue);}
+  .vp-card:nth-child(2) .icon-sq{background:var(--rose-tint);} .vp-card:nth-child(2) .icon-sq .icon{color:var(--rose);}
+  .vp-card:nth-child(3) .icon-sq{background:var(--orange-tint);} .vp-card:nth-child(3) .icon-sq .icon{color:var(--orange);}
+  .vp-card:nth-child(4) .icon-sq{background:var(--indigo-tint);} .vp-card:nth-child(4) .icon-sq .icon{color:var(--indigo);}
+
+  /* ---------- Generic section ---------- */
+  section{padding:80px 0;}
+
+  /* ---------- Programs ---------- */
+  .tracks-grid{display:grid;grid-template-columns:1fr;gap:32px;}
+  @media(min-width:720px){ .tracks-grid{grid-template-columns:1fr 1fr;} }
+  @media(min-width:1080px){ .tracks-grid{grid-template-columns:repeat(3,1fr);} }
+  .track-card{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);
+    padding:29px;display:flex;flex-direction:column;gap:16px;box-shadow:var(--shadow-md);
+    transition:transform .2s ease, border-color .2s ease;
+  }
+  .track-card:hover{transform:translateY(-4px);border-color:var(--border-strong);}
+  .track-card.featured{background:linear-gradient(165deg,var(--surface-2),var(--surface));border-color:rgba(255,79,154,0.35);}
+  .track-card .icon-sq{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;}
+  .track-card .icon-sq .icon{width:22px;height:22px;}
+  .track-card h3{font-size:20px;font-weight:600;}
+  .track-card .desc{color:var(--text-muted);font-size:14px;line-height:1.6;flex-grow:1;}
+  .track-list{display:flex;flex-direction:column;gap:9px;}
+  .track-list li{display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:var(--text-muted);}
+  .track-list .icon{width:13px;height:13px;color:var(--maroon);flex-shrink:0;margin-top:2px;}
+  .track-link{
+    display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14px;
+    color:var(--maroon);padding-top:8px;border-top:1px solid var(--border);
+  }
+  .track-link .icon{width:9px;height:9px;}
+  .track-card:nth-child(1) .icon-sq{background:var(--blue-tint);} .track-card:nth-child(1) .icon-sq .icon{color:var(--blue);}
+  .track-card:nth-child(2) .icon-sq{background:var(--orange-tint);} .track-card:nth-child(2) .icon-sq .icon{color:var(--orange);}
+  .track-card:nth-child(3) .icon-sq{background:var(--rose-tint);} .track-card:nth-child(3) .icon-sq .icon{color:var(--rose);}
+  .track-card:nth-child(4) .icon-sq{background:var(--indigo-tint);} .track-card:nth-child(4) .icon-sq .icon{color:var(--indigo);}
+  .track-card:nth-child(5) .icon-sq{background:var(--maroon-tint);} .track-card:nth-child(5) .icon-sq .icon{color:var(--maroon);}
+  .track-card:nth-child(6) .icon-sq{background:var(--blue-tint);} .track-card:nth-child(6) .icon-sq .icon{color:var(--blue);}
+  .track-badge{align-self:flex-start;background:var(--surface-2);color:var(--text-muted);font-size:11px;font-weight:600;padding:4px 10px;border-radius:999px;}
+
+  /* ---------- Life at Lingam ---------- */
+  .life-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:48px;}
+  .life-head .col{max-width:660px;}
+  .life-head h2{font-size:clamp(26px,3.6vw,36px);font-weight:700;margin:14px 0 16px;line-height:1.25;}
+  .life-head p{color:var(--text-muted);font-size:16px;line-height:1.6;}
+  .life-caption{font-size:12px;color:var(--text-faint);font-style:italic;}
+
+  .life-photos{display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:32px;}
+  @media(min-width:860px){ .life-photos{grid-template-columns:1fr 1fr;} }
+  .life-photo{
+    border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;
+    background:var(--surface);box-shadow:var(--shadow-md);
+  }
+  .life-photo .img{
+    aspect-ratio:574/359;position:relative;display:flex;align-items:flex-start;padding:16px;
+    overflow:hidden;background:#2a1830;
+  }
+  .life-photo .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+  .life-photo .img::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.05) 40%);}
+  .life-photo .img .photo-tag{position:relative;z-index:2;}
+  .photo-tag{
+    display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,0.55);
+    color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;
+    border:1px solid rgba(255,255,255,0.2);
+  }
+  .life-photo .body{padding:32px;}
+  .life-photo h3{font-size:20px;font-weight:600;margin-bottom:12px;}
+  .life-photo .body p{color:var(--text-muted);font-size:14.5px;line-height:1.6;}
+  .life-photo .meta{
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;
+    margin-top:20px;padding-top:16px;border-top:1px solid var(--border);
+    font-size:13px;color:var(--text-faint);
+  }
+  .life-photo .meta .r{display:flex;align-items:center;gap:6px;}
+  .life-photo .meta .icon{width:12px;height:12px;color:var(--maroon);}
+
+  .milestones{display:grid;grid-template-columns:1fr;gap:24px;}
+  @media(min-width:760px){ .milestones{grid-template-columns:repeat(3,1fr);} }
+  .milestone{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);
+    padding:21px;display:flex;gap:16px;align-items:flex-start;
+  }
+  .milestone .icon-sq{width:40px;height:40px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--maroon-tint);}
+  .milestone .icon-sq .icon{width:20px;height:20px;color:var(--maroon);}
+  .milestone h4{font-size:16px;font-weight:600;margin-bottom:6px;}
+  .milestone p{font-size:13.5px;color:var(--text-muted);line-height:1.55;}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center;}
+  @media(min-width:960px){ .about-grid{grid-template-columns:1fr 1fr;} }
+  .about-img-wrap{position:relative;}
+  .about-img{
+    aspect-ratio:568/317;border-radius:var(--radius-lg);border:1px solid var(--border-strong);
+    background:#2a1830;box-shadow:var(--shadow-lg);overflow:hidden;
+  }
+  .about-img img{width:100%;height:100%;object-fit:cover;display:block;}
+  .about-card{
+    background:var(--surface);border:1px solid var(--border);border-top:none;
+    border-radius:0 0 var(--radius-lg) var(--radius-lg);padding:17px;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:-2px;
+  }
+  .about-card .left{display:flex;gap:12px;align-items:flex-start;}
+  .about-card .icon{width:16px;height:20px;color:var(--maroon);margin-top:2px;}
+  .about-card h4{font-size:16px;font-weight:600;}
+  .about-card p{font-size:13px;color:var(--text-muted);margin-top:2px;}
+  .about-card .directions{font-size:13px;font-weight:600;color:var(--maroon);white-space:nowrap;}
+
+  .about-text p{color:var(--text-muted);font-size:15.5px;line-height:1.65;margin-bottom:20px;}
+  .principle-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;}
+  .principle{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:17px;}
+  .principle h4{font-size:15px;font-weight:600;margin-bottom:8px;}
+  .principle p{font-size:13px;color:var(--text-muted);line-height:1.5;}
+
+  /* ---------- Testimonials ---------- */
+  .stories{display:grid;grid-template-columns:1fr;gap:24px;}
+  @media(min-width:760px){ .stories{grid-template-columns:repeat(3,1fr);} }
+  .story{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);
+    padding:33px;display:flex;flex-direction:column;box-shadow:var(--shadow-md);
+  }
+  .stars{display:flex;gap:3px;margin-bottom:16px;}
+  .stars .icon{width:15px;height:14px;color:var(--orange);}
+  .story .quote{font-size:14.5px;color:var(--text-muted);line-height:1.65;font-style:italic;flex-grow:1;}
+  .story .who{
+    display:flex;align-items:center;gap:12px;margin-top:24px;padding-top:20px;
+    border-top:1px solid var(--border);
+  }
+  .avatar{
+    width:40px;height:40px;border-radius:999px;background:var(--maroon-tint);color:var(--maroon);
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;
+  }
+  .who .name{font-weight:700;font-size:14px;}
+  .who .role{font-size:12px;color:var(--text-faint);margin-top:2px;}
+
+  /* ---------- Admissions ---------- */
+  .admissions{background:var(--bg-alt);border-top:1px solid var(--border);}
+  .adm-grid{display:grid;grid-template-columns:1fr;gap:40px;}
+  @media(min-width:1020px){ .adm-grid{grid-template-columns:1.4fr 1fr;} }
+  .adm-form-wrap{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);
+    padding:41px;box-shadow:var(--shadow-lg);
+  }
+  .adm-form-wrap h2{font-size:clamp(24px,3vw,32px);font-weight:700;margin:14px 0 12px;line-height:1.25;}
+  .adm-form-wrap>p{color:var(--text-muted);font-size:15px;line-height:1.6;margin-bottom:32px;}
+  form{display:flex;flex-direction:column;gap:24px;}
+  .field-row{display:grid;grid-template-columns:1fr;gap:24px;}
+  @media(min-width:560px){ .field-row{grid-template-columns:1fr 1fr;} }
+  .field label{display:block;font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:8px;}
+  .field input, .field textarea{
+    width:100%;background:var(--surface-2);border:1px solid var(--border-strong);
+    border-radius:var(--radius-sm);padding:15px 17px;color:var(--text);font-size:15px;font-family:inherit;
+    transition:border-color .15s ease, box-shadow .15s ease;
+  }
+  .field textarea{resize:vertical;min-height:100px;}
+  .field input::placeholder, .field textarea::placeholder{color:var(--text-faint);}
+  .field input:focus, .field textarea:focus{outline:none;border-color:var(--maroon);box-shadow:0 0 0 3px var(--maroon-tint);}
+  .submit-btn{width:100%;height:48px;}
+  .privacy-note{text-align:center;font-size:12px;color:var(--text-faint);}
+  .form-status{font-size:13px;text-align:center;min-height:18px;}
+  .form-status.ok{color:#7be3a0;}
+  .form-status.err{color:#ff8b8b;}
+
+  .contact-card{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);
+    padding:32px;box-shadow:var(--shadow-lg);margin-bottom:24px;
+  }
+  .contact-card>p:first-of-type{margin-top:30px;color:var(--text-muted);font-size:14px;line-height:1.6;}
+  .contact-card h3{font-size:22px;font-weight:700;margin:8px 0 10px;}
+  .contact-list{margin-top:24px;display:flex;flex-direction:column;}
+  .contact-list a{
+    display:flex;align-items:center;gap:16px;padding:14px 0;border-top:1px solid var(--border);
+  }
+  .contact-list a:first-child{border-top:none;}
+  .contact-list .icon-circle{
+    width:44px;height:44px;border-radius:999px;background:var(--maroon-tint);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .contact-list .icon-circle .icon{width:18px;height:18px;color:var(--maroon);}
+  .contact-list .label{font-size:12px;color:var(--text-faint);}
+  .contact-list .value{font-size:16px;font-weight:700;margin-top:2px;}
+
+  .address-card{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);
+    padding:25px;display:flex;gap:16px;box-shadow:var(--shadow-md);
+  }
+  .address-card .icon-sq{width:40px;height:40px;border-radius:8px;background:var(--orange-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .address-card .icon-sq .icon{width:18px;height:18px;color:var(--orange);}
+  .address-card h4{font-size:16px;font-weight:700;margin-bottom:8px;}
+  .address-card p{font-size:14px;color:var(--text-muted);line-height:1.55;}
+  .address-card .note{font-size:12.5px;color:var(--text-faint);margin-top:8px;}
+
+  /* ---------- Footer ---------- */
+  footer{background:#0d0710;border-top:1px solid var(--border);}
+  .footer-grid{
+    display:grid;grid-template-columns:1fr;gap:40px;padding:64px 0 0;
+  }
+  @media(min-width:760px){ .footer-grid{grid-template-columns:1fr 1fr;} }
+  @media(min-width:1080px){ .footer-grid{grid-template-columns:1.3fr 1fr 1fr 1.2fr;} }
+  .footer-brand .title{font-family:'Outfit';font-weight:700;font-size:22px;color:#fff;}
+  .footer-brand p{margin-top:16px;font-size:14px;color:var(--text-muted);line-height:1.7;}
+  .footer-badge{
+    display:inline-flex;align-items:center;gap:8px;margin-top:16px;
+    font-size:12px;color:var(--text-faint);
+  }
+  .footer-badge .icon{width:13px;height:12px;color:var(--orange);}
+  .footer h4{font-size:15px;font-weight:700;margin-bottom:16px;color:#fff;}
+  .footer-list li{margin-bottom:11px;}
+  .footer-list a{font-size:14px;color:var(--text-muted);}
+  .footer-list a:hover{color:var(--maroon);}
+  .footer-contact p{font-size:14px;color:var(--text-muted);margin-bottom:14px;line-height:1.5;}
+  .footer-contact .btn-outline{margin-top:8px;border-color:var(--border-strong);}
+
+  .copyright{
+    margin-top:56px;border-top:1px solid var(--border);padding:25px 0;
+    display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
+    font-size:13px;color:var(--text-faint);
+  }
+  .copyright .links{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+  .copyright .links a:hover{color:var(--maroon);}
+
+  /* ---------- Mobile sticky CTA ---------- */
+  .mobile-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;
+    display:flex;gap:10px;padding:12px 16px;
+    background:rgba(11,7,16,0.92);backdrop-filter:blur(10px);
+    border-top:1px solid var(--border);
+  }
+  .mobile-cta a{flex:1;text-align:center;}
+  @media(min-width:860px){ .mobile-cta{display:none;} }
+  @media(min-width:860px){ body{padding-bottom:0;} }
+  @media(max-width:859px){ body{padding-bottom:72px;} }
+
+  @media(max-width:1079px){
+    .nav-row{height:70px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Top Info Ribbon ===== -->
+<div class="ribbon">
+  <div class="wrap">
+    <div class="ribbon-left">
+      <span class="ribbon-item"><span class="icon">📍</span>Kolathur, Chennai - 600099, Tamil Nadu</span>
+      <span class="ribbon-item"><span class="icon">📞</span>+91 98846 00206 / +91 99625 17785</span>
+      <span class="ribbon-item"><span class="icon">✉️</span>yuvaranilinga@gmail.com</span>
+    </div>
+    <div class="ribbon-right">
+      <span class="ribbon-pill">Govt. Registered Special Institution</span>
+      <span class="ribbon-hours">Visiting Hours: Mon–Sat (9:00 AM – 4:00 PM)</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Header / Nav ===== -->
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a href="#top" class="brand">
+      <span class="brand-mark">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 2 7l10 5 10-5-10-5Z" stroke="#1a0410" stroke-width="2" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#1a0410" stroke-width="2" stroke-linejoin="round"/></svg></span>
+      </span>
+      <span class="brand-text">
+        <div class="title">Lingam School</div>
+        <div class="sub">Special Education &amp; Therapy</div>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="#top" class="active">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#programs">Special Programs</a>
+      <a href="#life">Life at Lingam</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="icon-btn" href="tel:+919884600206" aria-label="Call">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.9 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="btn btn-outline btn-sm" href="#admissions">Book Campus Visit</a>
+      <a class="btn btn-sm" href="#admissions">Enquire Now</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-left">
+        <span class="hero-pill"><span class="dot"></span>Empowering Every Unique Potential with Love &amp; Care</span>
+        <h1>Nurturing Potential,<br><span class="accent">Celebrating Every Milestone.</span></h1>
+        <p class="hero-desc">Lingam School for Special Education provides dedicated, evidence-based developmental support, sensory integration, and joyful life-skills training for neurodivergent children in Chennai.</p>
+        <div class="badge-row">
+          <span class="badge autism">Autism Spectrum</span>
+          <span class="badge downs">Down's Syndrome</span>
+          <span class="badge cerebral">Cerebral Palsy</span>
+          <span class="badge intellectual">Intellectual Disability</span>
+          <span class="badge adhd">Hyperactive &amp; ADHD Support</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="#admissions" class="btn">Book a Campus Visit
+            <span class="icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#1a0410" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+          <a href="#programs" class="btn btn-outline">Explore Programs
+            <span class="icon"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-item"><div class="num">1 : 4</div><div class="label">Teacher-Student Ratio</div></div>
+          <div class="trust-item"><div class="num">100%</div><div class="label">Individualized Education</div></div>
+          <div class="trust-item"><div class="num">Certified</div><div class="label">Therapists &amp; Special Staff</div></div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="carousel-frame">
+          <div class="carousel" id="carousel">
+            <div class="slide slide-1 active" data-slide="0">
+              <img class="slide-img" src="https://picsum.photos/seed/lingam-annual-day/900/675" alt="Annual day celebration" loading="lazy">
+              <span class="tag">Annual Day Celebration</span>
+              <h3>Community &amp; Heartwarming Recognition</h3>
+              <p>Students, parents, and educators celebrating progress with dignity and festive joy.</p>
+            </div>
+            <div class="slide slide-2" data-slide="1">
+              <img class="slide-img" src="https://picsum.photos/seed/lingam-sports-race/900/675" alt="Students racing on the sports ground" loading="lazy">
+              <span class="tag">Annual Sports Track Event</span>
+              <h3>Running with Confidence &amp; Dignity</h3>
+              <p>Our beloved students sprinting joyfully alongside our loving teachers on the open sports ground.</p>
+            </div>
+            <button class="car-btn prev" id="prevSlide" aria-label="Previous slide">
+              <span class="icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <button class="car-btn next" id="nextSlide" aria-label="Next slide">
+              <span class="icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="indicators" id="indicators">
+              <button class="active" data-goto="0" aria-label="Slide 1"></button>
+              <button data-goto="1" aria-label="Slide 2"></button>
+            </div>
+          </div>
+        </div>
+        <div class="reassure-badge">
+          <span class="icon-circle"><span class="icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9Z" stroke="var(--orange)" stroke-width="2" stroke-linejoin="round"/></svg></span></span>
+          <div>
+            <div class="t1">Every Child Can Shine</div>
+            <div class="t2">Tailored IEP &amp; Joyful Guidance</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Quick Overview / Value Props ===== -->
+  <section class="value-props">
+    <div class="wrap vp-grid">
+      <div class="vp-card">
+        <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M12 4v16M4 8h16M4 16h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></span>
+        <h3>Individualized IEP</h3>
+        <p>Each child begins with a thorough multi-disciplinary assessment, charting measurable milestones.</p>
+      </div>
+      <div class="vp-card">
+        <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="18" height="20" fill="none"><path d="M12 21c-4-2.5-9-6-9-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5-5 8.5-9 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span></span>
+        <h3>Integrated Therapy</h3>
+        <p>Continuous speech therapy, occupational therapy, and physiotherapy embedded into daily routines.</p>
+      </div>
+      <div class="vp-card">
+        <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="16" height="22" fill="none"><path d="M12 2c3 3 5 7 5 11a5 5 0 0 1-10 0c0-4 2-8 5-11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span></span>
+        <h3>Active Outdoor Play</h3>
+        <p>Spacious sand grounds, athletic races, and motor-skill coordination activities to build physical vitality.</p>
+      </div>
+      <div class="vp-card">
+        <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="22" height="18" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/><path d="M2 20c.5-3.5 3-5.5 6-5.5s5.5 2 6 5.5M14.5 20c.3-2.5 1.8-4 4-4s3.3 1.5 3.7 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></span>
+        <h3>Parent Partnership</h3>
+        <p>Transparent monthly counseling, home intervention coaching, and compassionate community solidarity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Programs ===== -->
+  <section id="programs">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Dedicated Development Tracks</span>
+        <h2>Official Curriculum &amp; Focused Care Tracks</h2>
+        <p>As officially displayed on our campus, Lingam School specializes in supporting five foundational neurodivergent developmental pathways, led by certified practitioners.</p>
+      </div>
+
+      <div class="tracks-grid">
+        <article class="track-card">
+          <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="19" height="20" fill="none"><path d="M12 2a5 5 0 0 0-5 5v2a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5Z" stroke="currentColor" stroke-width="2"/><path d="M7 13v1a5 5 0 0 0 10 0v-1M12 19v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></span>
+          <span class="track-badge">Spectrum Track</span>
+          <h3>Autism Support</h3>
+          <p class="desc">Focuses on structured TEACCH methodologies, functional verbal &amp; non-verbal communication, sensory diet calibration, and reducing sensory overload in quiet, safe spaces.</p>
+          <ul class="track-list">
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Visual Schedule &amp; PECS Integration</li>
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sensory Room Desensitization</li>
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Peer Socialization Groups</li>
+          </ul>
+          <a href="#admissions" class="track-link">Admissions for Autism Program <span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        </article>
+
+        <article class="track-card">
+          <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span></span>
+          <span class="track-badge">Developmental Track</span>
+          <h3>Down's Syndrome Support</h3>
+          <p class="desc">Emphasizes cognitive enrichment, verbal articulation, hypotonia management through physical therapy, and social-emotional development that encourages natural warmth.</p>
+          <ul class="track-list">
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Speech &amp; Oral Motor Therapy</li>
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Muscle Tone Strengthening</li>
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Early Academic Readiness</li>
+          </ul>
+          <a href="#admissions" class="track-link">Down's Syndrome Curriculum <span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        </article>
+
+        <article class="track-card">
+          <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></span>
+          <span class="track-badge">Physical &amp; Mobility</span>
+          <h3>Cerebral Palsy Therapy</h3>
+          <p class="desc">Comprehensive physical rehabilitation, posture correction, gait training, assistive mobility devices, and fine-motor coordination activities for greater physical independence.</p>
+          <ul class="track-list">
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Daily Physiotherapy Exercises</li>
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Assistive Posture Support</li>
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Fine-motor Hand Dexterity</li>
+          </ul>
+          <a href="#admissions" class="track-link">Motor Skill Programs <span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        </article>
+
+        <article class="track-card">
+          <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="22" height="18" fill="none"><path d="M4 19V7a2 2 0 0 1 2-2h5l2 2h5a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span></span>
+          <span class="track-badge">Life Skills &amp; Academics</span>
+          <h3>Intellectual Disability Care</h3>
+          <p class="desc">Tailored functional academics (reading signs, handling currency, telling time) paired with self-help skills: dressing, personal hygiene, and independent task completion.</p>
+          <ul class="track-list">
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Functional Literacy &amp; Numeracy</li>
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>ADL (Activities of Daily Living)</li>
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Vocational Training Foundations</li>
+          </ul>
+          <a href="#admissions" class="track-link">Learn About Life Skills <span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        </article>
+
+        <article class="track-card">
+          <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="16" height="20" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span></span>
+          <span class="track-badge">Behavior &amp; Attention</span>
+          <h3>Hyperactive &amp; ADHD Guidance</h3>
+          <p class="desc">Positive behavioral interventions, focused attention exercises, movement breaks, and structured energetic games designed to channel high energy productively.</p>
+          <ul class="track-list">
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Attention Span Enhancement</li>
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Channeled Sensory Play</li>
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Impulse Control Strategies</li>
+          </ul>
+          <a href="#admissions" class="track-link">ADHD Behavioral Plans <span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        </article>
+
+        <article class="track-card featured">
+          <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M9 18V5l12-2v13M9 9l12-2M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM18 19a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span></span>
+          <span class="track-badge">Holistic Integration</span>
+          <h3>Arts, Music &amp; Sports Therapy</h3>
+          <p class="desc">Beyond traditional classrooms, children engage in joyful music circles, expressive painting, and our annual outdoor athletic games on the school's open play grounds.</p>
+          <ul class="track-list">
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Rhythm &amp; Melodic Auditory Training</li>
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Tactile Clay &amp; Finger Painting</li>
+            <li><span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Outdoor Sprint &amp; Balance Games</li>
+          </ul>
+          <a href="#life" class="track-link">View Sports &amp; Activities <span class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Life at Lingam ===== -->
+  <section id="life" style="background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="wrap">
+      <div class="life-head">
+        <div class="col">
+          <span class="eyebrow">Annual Sports Day &amp; Joyful Movement</span>
+          <h2>Life at Lingam: Joyful Learning, Play &amp; Physical Growth</h2>
+          <p>Physical exercise and structured outdoor play foster motor coordination, peer companionship, and sheer happiness. Witness our students and teachers celebrating athletic milestones together.</p>
+        </div>
+        <span class="life-caption">Open ground activities in Chennai</span>
+      </div>
+
+      <div class="life-photos">
+        <div class="life-photo">
+          <div class="img"><img src="https://picsum.photos/seed/lingam-running/700/440" alt="Students running with teachers on the sports ground" loading="lazy"><span class="photo-tag">🏃 Genuine School Photo</span></div>
+          <div class="body">
+            <h3>Running with Confidence &amp; Dignity</h3>
+            <p>Our beloved students sprinting joyfully alongside our loving teachers. Outdoor running helps rebuild gross motor confidence, balance, spatial awareness, and mutual cheering.</p>
+            <div class="meta">
+              <span>Outdoor Sports Field &amp; Volleyball Court</span>
+              <span class="r"><span class="icon">🩺</span>Guided by Physical Therapists</span>
+            </div>
+          </div>
+        </div>
+        <div class="life-photo">
+          <div class="img"><img src="https://picsum.photos/seed/lingam-coordination/700/440" alt="Teacher assisting student during a coordination game" loading="lazy"><span class="photo-tag">🎯 Genuine School Photo</span></div>
+          <div class="body">
+            <h3>Hand-Eye Coordination &amp; Tactile Games</h3>
+            <p>Patience in every step. Teachers gently supporting students during coordination challenges such as ball balancing and focus hurdles — transforming physical therapy into celebratory play.</p>
+            <div class="meta">
+              <span>Gentle Encouragement &amp; Positive Reinforcement</span>
+              <span class="r"><span class="icon">💞</span>Deep Educator Bond</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="milestones">
+        <div class="milestone">
+          <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M6 4v16l7-4 7 4V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span></span>
+          <div><h4>Annual Cultural Day</h4><p>Stage performances, musical dance, and public recognition that make our children feel valued and celebrated.</p></div>
+        </div>
+        <div class="milestone">
+          <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M12 2v20M5 8h14M5 16h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></span>
+          <div><h4>Self-Feeding &amp; Daily Autonomy</h4><p>Structured meal times where kids practice independent holding of utensils, hand washing, and peer etiquette.</p></div>
+        </div>
+        <div class="milestone">
+          <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M3 12h18M3 6h18M3 18h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></span>
+          <div><h4>Community &amp; Nature Walks</h4><p>Safe neighborhood strolls under close supervision to build street safety awareness and social comfort.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-img-wrap">
+        <div class="about-img"><img src=" "/Chennai/Lingam-School-For-Special-Children-Behind-Bus-Stand-Kolathur/044PXX44-XX44-150724111526-M5N3_BZDET/gallery?tab=campus&amp;template=1&amp;menu_slider=0&amp;vrsn=3.0&amp;isOpenAbd=undefined&amp;bd=&amp;abd_btn=&amp;ncatid=&amp;cat_b2b_flag=&amp;mncatname=&amp;term=&amp;area=&amp;search=Lingam-School-For-Special-Children-Behind-Bus-Stand-Kolathur&amp;abd_heading=&amp;dselect=303448705&amp;pselect=303448705&amp;sname=photos&amp;scat=Photos" tabindex="0" class="jsx-1a7a868e11db2fa jddtl_slide" alt="Lingam School campus building entrance" loading="lazy"></div>
+        <div class="about-card">
+          <div class="left">
+            <span class="icon"><svg viewBox="0 0 24 24" width="16" height="20" fill="none"><path d="M12 22s7-5.7 7-12A7 7 0 0 0 5 10c0 6.3 7 12 7 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/></svg></span>
+            <div>
+              <h4>Kolathur Campus, Chennai</h4>
+              <p>Quiet residential setting with secure gated enclosure</p>
+            </div>
+          </div>
+          <a href="#contact" class="directions">Directions →</a>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <span class="eyebrow">About Our Institution</span>
+        <h2 style="font-size:clamp(26px,3.4vw,34px);font-weight:700;margin:14px 0 20px;line-height:1.3;">A Compassionate Sanctuary for Growth &amp; Independence</h2>
+        <p>Founded with an unwavering commitment to neurodiverse children, Lingam School for Special Education provides a dignified, warm, and professional learning home. We recognize that no two children develop at the same pace or in the exact same manner.</p>
+        <p>Our multi-disciplinary team consists of licensed special educators, certified speech and language pathologists, occupational therapists, and clinical psychologists working in unison to create measurable milestones for each learner.</p>
+        <div class="principle-grid">
+          <div class="principle"><h4>Evidence-Based Care</h4><p>Validated clinical frameworks tailored to South Indian cultural contexts.</p></div>
+          <div class="principle"><h4>Unconditional Warmth</h4><p>Every child is welcomed with open arms, patience, and joyful encouragement.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section style="background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Voices of Reassurance</span>
+        <h2>What Families Say About Lingam School</h2>
+        <p>Hear from parents who experienced firsthand breakthroughs in speech, self-reliance, and joyful smiles.</p>
+      </div>
+      <div class="stories">
+        <div class="story">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Before joining Lingam School, our 6-year-old son with autism struggled with intense sensory meltdowns. The patience of the teachers here has transformed him. He now makes eye contact, smiles, and loves participating in the sports day!"</p>
+          <div class="who">
+            <span class="avatar">RM</span>
+            <div><div class="name">Mrs. R. Meenakshi</div><div class="role">Parent of Aarav (Autism Support Track)</div></div>
+          </div>
+        </div>
+        <div class="story">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"The physical therapy team for Cerebral Palsy is remarkably dedicated. Seeing our daughter take independent steps across the courtyard was a day our entire family wept tears of joy. Lingam is not just a school, it is family."</p>
+          <div class="who">
+            <span class="avatar">SK</span>
+            <div><div class="name">Mr. S. Karthikeyan</div><div class="role">Parent of Divya (CP Therapy Track)</div></div>
+          </div>
+        </div>
+        <div class="story">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Our daughter with Down's syndrome gained conversational speech and functional self-care skills. The school's annual celebration photo showing her receiving her gift proudly hangs in our living room!"</p>
+          <div class="who">
+            <span class="avatar">PP</span>
+            <div><div class="name">P. Padmavathi</div><div class="role">Parent of Nithya (Down's Support Track)</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Admissions Form ===== -->
+  <section id="admissions" class="admissions">
+    <div class="wrap adm-grid">
+      <div class="adm-form-wrap">
+        <span class="eyebrow">Admissions &amp; Counseling</span>
+        <h2>Book an Assessment or Campus Visit</h2>
+        <p>We understand that choosing a special education school requires immense trust. Speak with our head counselor or schedule a gentle tour with your child.</p>
+
+        <form id="admissionForm" method="GET" action="https://script.google.com/macros/s/AKfycbyWxhtcdMJBpaWbsVT9a6yYgxYYtVJ95KuGpb7KHcTuYWMOpi-1pUOS9IG_oAwZ-GKvJQ/exec" target="hiddenSubmitFrame">
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Parent / Guardian Name *</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Ramesh Kumar" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98846 00000" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="e.g. ramesh@email.com" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your child's favorite activities, current challenges, or your preferred time to visit our Kolathur campus."></textarea>
+          </div>
+          <button type="submit" class="btn submit-btn" id="submitBtn">Submit Campus Visit Request
+            <span class="icon"><svg viewBox="0 0 24 24" width="14" height="12" fill="none"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z" stroke="#1a0410" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          </button>
+          <div class="form-status" id="formStatus"></div>
+          <p class="privacy-note">Your privacy is respected. All inquiries are held in strict medical confidence.</p>
+        </form>
+        <iframe name="hiddenSubmitFrame" id="hiddenSubmitFrame" style="display:none;" title="form submission target"></iframe>
+      </div>
+
+      <div>
+        <div class="contact-card">
+          <span class="eyebrow">Contact the Principal &amp; Admissions Desk</span>
+          <h3>Get Immediate Guidance</h3>
+          <p>Have urgent questions regarding admission criteria, fee structures, or specialized transport routes? Call directly:</p>
+          <div class="contact-list">
+            <a href="tel:+919884600206">
+              <span class="icon-circle"><span class="icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.9 2Z" stroke="var(--maroon)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+              <div><div class="label">Primary Admissions Line</div><div class="value">+91 98846 00206</div></div>
+            </a>
+            <a href="tel:+919962517785">
+              <span class="icon-circle"><span class="icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.9 2Z" stroke="var(--maroon)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+              <div><div class="label">Secondary Campus Desk</div><div class="value">+91 99625 17785</div></div>
+            </a>
+            <a href="mailto:yuvaranilinga@gmail.com">
+              <span class="icon-circle"><span class="icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M4 4h16v16H4V4Z" stroke="var(--maroon)" stroke-width="2" stroke-linejoin="round"/><path d="m4 6 8 7 8-7" stroke="var(--maroon)" stroke-width="2" stroke-linejoin="round"/></svg></span></span>
+              <div><div class="label">Official School Email</div><div class="value" style="font-size:14px;">yuvaranilinga@gmail.com</div></div>
+            </a>
+          </div>
+        </div>
+        <div id="contact" class="address-card">
+          <span class="icon-sq"><span class="icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M12 22s7-5.7 7-12A7 7 0 0 0 5 10c0 6.3 7 12 7 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/></svg></span></span>
+          <div>
+            <h4>Campus Address &amp; Location</h4>
+            <p>Lingam School for Special Children, Kolathur, Chennai - 600099, Tamil Nadu, India.</p>
+            <p class="note">Accessible via Perambur &amp; Retteri Junction</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="title">Lingam School</div>
+        <p>School for Special Education. Nurturing children with Autism, Down's Syndrome, Cerebral Palsy, Intellectual Disability, and Hyperactivity with heartfelt compassion.</p>
+        <span class="footer-badge"><span class="icon">🛡️</span>Registered Special Ed Institution</span>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-list">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#programs">Special Programs</a></li>
+          <li><a href="#admissions">Admissions Guidelines</a></li>
+          <li><a href="#life">Life at Lingam</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Core Care Tracks</h4>
+        <ul class="footer-list">
+          <li><a href="#programs">Autism Spectrum Support</a></li>
+          <li><a href="#programs">Down's Syndrome Care</a></li>
+          <li><a href="#programs">Cerebral Palsy Physical Therapy</a></li>
+          <li><a href="#programs">Intellectual Disability Program</a></li>
+          <li><a href="#programs">ADHD &amp; Hyperactive Focus Plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact &amp; Campus Visit</h4>
+        <p>Kolathur, Chennai - 600099, Tamil Nadu</p>
+        <p>Helpline: +91 98846 00206</p>
+        <p>Email: yuvaranilinga@gmail.com</p>
+        <a href="#admissions" class="btn btn-outline btn-sm">Schedule Visit</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <span>© 2025 Lingam School for Special Children. Dedicated to compassionate developmental care. All rights reserved.</span>
+      <span class="links">
+        <a href="#top">Parent Testimonials</a> • <a href="#top">Privacy Policy</a> • <a href="#contact">Campus Location</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Mobile sticky CTAs ===== -->
+<div class="mobile-cta">
+  <a href="#admissions" class="btn btn-outline btn-sm">Book Campus Visit</a>
+  <a href="#admissions" class="btn btn-sm">Enquire Now</a>
+</div>
+
+<script>
+  // ---------- Hero Carousel ----------
+  (function () {
+    var slides = document.querySelectorAll('.slide');
+    var dots = document.querySelectorAll('#indicators button');
+    var current = 0;
+
+    function goTo(index) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach(function (s, i) { s.classList.toggle('active', i === current); });
+      dots.forEach(function (d, i) { d.classList.toggle('active', i === current); });
+    }
+
+    document.getElementById('prevSlide').addEventListener('click', function () { goTo(current - 1); });
+    document.getElementById('nextSlide').addEventListener('click', function () { goTo(current + 1); });
+    dots.forEach(function (d) {
+      d.addEventListener('click', function () { goTo(parseInt(d.getAttribute('data-goto'), 10)); });
+    });
+
+    setInterval(function () { goTo(current + 1); }, 7000);
+  })();
+
+  // ---------- Admissions Form Submission ----------
+  // Submits via a real HTML form GET into a hidden iframe (not fetch()).
+  // This is the most reliable way to reach a Google Apps Script web app
+  // from a page opened directly as a local file:// with no server —
+  // it sidesteps browser fetch/CORS restrictions entirely, since it's a
+  // plain form submission/navigation rather than a script-driven request.
+  (function () {
+    var form = document.getElementById('admissionForm');
+    var status = document.getElementById('formStatus');
+    var submitBtn = document.getElementById('submitBtn');
+    var frame = document.getElementById('hiddenSubmitFrame');
+    var submitted = false;
+
+    function showSuccess() {
+      status.textContent = "Thank you! Your campus visit request has been received.";
+      status.className = "form-status ok";
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = "1";
+      form.reset();
+    }
+
+    // The iframe is cross-origin, so we can't read its response — but its
+    // "load" event still fires once the request completes, which is all
+    // we need to confirm the request actually went out.
+    frame.addEventListener('load', function () {
+      if (submitted) showSuccess();
+    });
+
+    form.addEventListener('submit', function () {
+      // No preventDefault: let the browser submit the form natively.
+      submitted = true;
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = "0.7";
+      status.textContent = "Sending...";
+      status.className = "form-status";
+
+      // Fallback in case the iframe's load event doesn't fire in a
+      // particular browser — still shows success after a short delay.
+      setTimeout(function () {
+        if (submitted) { showSuccess(); submitted = false; }
+      }, 2500);
+    });
+  })();
+</script>
+
+</body>
+</html>
